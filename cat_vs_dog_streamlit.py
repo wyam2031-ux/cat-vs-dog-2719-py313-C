@@ -25,7 +25,7 @@ if uploaded_file is not None:
     img = PILImage.create(uploaded_file)
     resized_img = img.resize((224, 224), Image.NEAREST)
     prediction = model.predict(resized_img)
-    st.text(prediction)
+    # st.text(prediction)
 
     st.image(uploaded_file)
     index = int(prediction[1])
